@@ -8,6 +8,6 @@ export class AppController {
  
   @Get('/')
   getFirst(@Res() res, @Req() req){
-    return res.render('boards/boards', {name : '안녕'});
+    return res.render('boards/boards', {name : '안녕', gender : 'male'});
   }
 }

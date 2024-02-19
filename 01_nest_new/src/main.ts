@@ -10,7 +10,7 @@ async function bootstrap() {
   app.use(urlencoded({extended: true}));
   app.setViewEngine('ejs');
   app.setBaseViewsDir(join(__dirname, '..', 'src', 'view'));
-  
+  app.useStaticAssets(join(__dirname, '..', 'src', 'static'), {index : false});
   await app.listen(3000);
 }
 bootstrap();
