@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Query, Req, Res } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query, Req, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -11,8 +11,8 @@ export class AppController {
     return res.render('boards/boards', {name : '안녕', gender : 'male'});
   }
 
-  @Get('/get/login')
-  firstAjax(@Query('name') name : any){
-    return name; 
+  @Post('/post/login')
+  firstAjax(@Body() body : any){
+    return {name : body.name, password : body.password}; 
   }
 }
