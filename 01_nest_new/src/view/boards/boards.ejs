@@ -10,5 +10,13 @@
     여기는 ejs로 view파일을 구성했습니다<br>
     <%= name %>
     <p><%=gender %></p>
+
+    <form name="loginForm">
+        <input type="text" name="name">
+        <button type="button" onclick="getLogin()">로그인</button>
+    </form>
+    <p class="resultBox"></p>
 </body>
+<script type="text/javascript" src="/asset/lib/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="/asset/js/boards.js"></script>
 </html>

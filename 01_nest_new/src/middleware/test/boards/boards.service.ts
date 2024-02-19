@@ -15,6 +15,10 @@ export class BoardsService {
     return `This action returns a #${id} board`;
   }
 
+  queryOne(id: number) : string{
+    return `this action returns a #${id} board`;
+  }
+
   remove(id: number) {
     return `This action removes a #${id} board`;
   }
