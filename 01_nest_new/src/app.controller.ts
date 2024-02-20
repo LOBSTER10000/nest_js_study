@@ -5,14 +5,14 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
- 
+  @Post('/post/login')
+  firstAjax(@Body() body : any){
+    return {name : body.name, password : body.password}; 
+  }
+
   @Get('/')
   getFirst(@Res() res, @Req() req){
     return res.render('boards/boards', {name : '안녕', gender : 'male'});
   }
 
-  @Post('/post/login')
-  firstAjax(@Body() body : any){
-    return {name : body.name, password : body.password}; 
-  }
 }
