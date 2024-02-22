@@ -15,4 +15,12 @@ describe('BoardsService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+  it('findOne', ()=> {
+    const id = 7;
+   
+
+    const result = service.findOne(id);
+    expect(result).toBe("This action returns a #7 board");
+  })
 });
