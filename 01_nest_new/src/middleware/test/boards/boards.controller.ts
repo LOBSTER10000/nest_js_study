@@ -13,7 +13,7 @@ export class BoardsController {
   }
 
   @Get('/hello1/:id')
-  findOne(@Param('id') id: number) {
+  findOne(@Param('id') id: string) {
   return this.boardsService.findOne(id);
   }
 
@@ -51,4 +51,6 @@ export class BoardsController {
   updateBoardStatus(@Param('id') id : string, @Body('status') status : BoardStatus){
     return this.boardsService.updateBoardById(id, status);
   }
+
+
 }

@@ -13,15 +13,15 @@ export class BoardsService {
     return `This action returns all boards`;
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} board`;
   }
 
-  queryOne(id: number) : string{
+  queryOne(id: number){
     return `this action returns a #${id} board`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} board`;
   }
 
